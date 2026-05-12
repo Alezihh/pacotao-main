@@ -107,7 +107,10 @@ const OfferSection = () => {
 
           {/* Acesso Vitalício — destaque */}
           <AnimatedSection delay={0.3}>
-            <motion.div
+            <div className="relative lg:scale-[1.05] lg:z-10 transition-transform duration-300">
+              {/* Pulsing border glow layer */}
+              <div className="absolute -inset-[2px] rounded-[2.6rem] bg-primary animate-border-glow pointer-events-none" />
+              <motion.div
               className="relative bg-foreground text-background rounded-[2.5rem] shadow-elevated overflow-hidden h-full flex flex-col p-8 lg:p-10"
               whileHover={{ y: -4 }}
               transition={{ duration: 0.4 }}
@@ -167,6 +170,7 @@ const OfferSection = () => {
                 <span className="flex items-center gap-1.5"><Shield className="w-3 h-3" />Garantido</span>
               </div>
             </motion.div>
+            </div>
           </AnimatedSection>
         </div>
       </div>

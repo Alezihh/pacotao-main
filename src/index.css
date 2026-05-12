@@ -206,6 +206,10 @@
     animation: pulseBorder 2.5s ease-in-out infinite;
   }
 
+  .animate-border-glow {
+    animation: borderGlow 2.4s ease-in-out infinite;
+  }
+
   .animate-scroll-up {
     animation: scrollUp 12s linear infinite;
   }
@@ -295,6 +299,15 @@
     }
     100% {
       transform: translateY(0);
+    }
+  }
+
+  @keyframes borderGlow {
+    0%, 100% {
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 1;
     }
   }
 
