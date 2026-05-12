@@ -90,7 +90,7 @@ const OfferSection = () => {
 
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
-                  onClick={() => window.open("https://checkout.ticto.app/OB20B47EE", "_blank")}
+                  onClick={() => window.open("https://pay.kirvano.com/979f22b9-7f26-490b-9129-cf712abbaaef", "_blank")}
                   variant="outline"
                   className="w-full rounded-full py-6 text-sm uppercase tracking-[0.15em] font-medium border-foreground text-foreground hover:bg-foreground hover:text-background"
                 >
@@ -157,7 +157,7 @@ const OfferSection = () => {
 
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
-                  onClick={() => window.open("https://checkout.ticto.app/O5515C365", "_blank")}
+                  onClick={() => window.open("https://pay.kirvano.com/e9f364c5-e5b7-4068-9d4b-99f8de043b19", "_blank")}
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-6 text-sm uppercase tracking-[0.15em] font-medium shadow-glow"
                 >
                   Quero Acesso Vitalício
