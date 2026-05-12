@@ -42,6 +42,13 @@ const OfferSection = () => {
               Escolha o plano ideal para você. Mesmo acervo completo, dois jeitos de acessar.
             </p>
           </AnimatedSection>
+          <AnimatedSection delay={0.25}>
+            <div className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full">
+              <span className="text-xs font-medium text-primary tracking-wide">
+                🔒 Acesso Vitalício por apenas R$ 89,90 — sem mensalidade, sem renovação
+              </span>
+            </div>
+          </AnimatedSection>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -98,7 +105,7 @@ const OfferSection = () => {
             </motion.div>
           </AnimatedSection>
 
-          {/* Plano Anual — destaque */}
+          {/* Acesso Vitalício — destaque */}
           <AnimatedSection delay={0.3}>
             <motion.div
               className="relative bg-foreground text-background rounded-[2.5rem] shadow-elevated overflow-hidden h-full flex flex-col p-8 lg:p-10"
@@ -106,27 +113,31 @@ const OfferSection = () => {
               transition={{ duration: 0.4 }}
             >
               <div className="absolute top-5 right-5 px-3 py-1 bg-primary text-primary-foreground rounded-full text-[10px] tracking-[0.15em] uppercase font-medium">
-                Mais escolhido
+                Melhor oferta
               </div>
 
-              <div className="mb-6">
+              <div className="mb-4">
                 <p className="text-[10px] tracking-[0.3em] uppercase text-primary font-medium mb-2">
-                  Plano Anual
+                  Acesso Vitalício
                 </p>
-                <h3 className="font-serif text-3xl">Economize 16%</h3>
+                <h3 className="font-serif text-3xl">Pague uma vez,<br />acesse para sempre.</h3>
+              </div>
+
+              {/* Destaque sem mensalidade */}
+              <div className="mb-5 flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-2xl px-4 py-3">
+                <Shield className="w-4 h-4 text-primary shrink-0" />
+                <p className="text-sm text-background/90 font-medium leading-snug">
+                  Sem mensalidade. Sem renovação. <span className="text-primary">Apenas R$ 89,90 uma única vez.</span>
+                </p>
               </div>
 
               <div className="mb-6">
-                <p className="text-sm text-background/60 line-through">
-                  R$ 238,80/ano
-                </p>
                 <div className="flex items-baseline gap-2">
-                  <span className="font-serif text-5xl">R$ 199</span>
+                  <span className="font-serif text-5xl">R$ 89</span>
                   <span className="text-2xl">,90</span>
-                  <span className="text-sm text-background/70">/ano</span>
                 </div>
-                <p className="text-sm text-background/70 mt-2 font-light">
-                  Equivale a <span className="text-primary font-medium">R$ 16,65/mês</span>.
+                <p className="text-sm text-background/60 mt-1 font-light">
+                  Pagamento único — acesso vitalício a todos os entregáveis.
                 </p>
               </div>
 
@@ -146,7 +157,7 @@ const OfferSection = () => {
                   onClick={() => window.open("https://checkout.ticto.app/O5515C365", "_blank")}
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-6 text-sm uppercase tracking-[0.15em] font-medium shadow-glow"
                 >
-                  Quero o Plano Anual
+                  Quero Acesso Vitalício
                 </Button>
               </motion.div>
 
