@@ -2,12 +2,15 @@ import HeroSection from "@/components/HeroSection";
 import PainSection from "@/components/PainSection";
 import SolutionSection from "@/components/SolutionSection";
 import TransformationSection from "@/components/TransformationSection";
+import CanvaTemplatesSection from "@/components/CanvaTemplatesSection";
+import PresetsSection from "@/components/PresetsSection";
 import ProductSection from "@/components/ProductSection";
 import ForWhoSection from "@/components/ForWhoSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import BonusSection from "@/components/BonusSection";
 import OfferSection from "@/components/OfferSection";
+import VideoSection from "@/components/VideoSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
@@ -22,8 +25,11 @@ const Index = () => {
       <SolutionSection />
       <ProductSection />
       <TransformationSection />
+      <CanvaTemplatesSection />
+      <PresetsSection />
       <ForWhoSection />
       <BenefitsSection />
+      <VideoSection />
       <OfferSection />
       <BonusSection />
       <SocialProofSection />

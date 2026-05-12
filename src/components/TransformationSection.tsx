@@ -1,23 +1,31 @@
-import beforeFruit from "@/assets/before-fruit.png";
-import afterFruit from "@/assets/after-fruit.jpg";
-import beforeLingerie from "@/assets/before-lingerie.jpg";
-import afterLingerie from "@/assets/after-lingerie.jpg";
-import beforeGym from "@/assets/before-gym.png";
-import afterGym from "@/assets/after-gym.jpg";
-import beforeNetflix from "@/assets/before-netflix.png";
-import afterNetflix from "@/assets/after-netflix.jpg";
-import beforeFitness from "@/assets/before-fitness.png";
-import afterFitness from "@/assets/after-fitness.jpg";
-import { motion } from "framer-motion";
+import story1 from "@/assets/storypack/imgi_149_Hfxexv8230920.jpg";
+import story2 from "@/assets/storypack/imgi_151_aHnDGE8953203.jpg";
+import story3 from "@/assets/storypack/imgi_153_qQMwum8953203.jpg";
+import story4 from "@/assets/storypack/imgi_155_imvFEJ8230920.jpg";
+import story5 from "@/assets/storypack/imgi_157_aWwFlE8953203.jpg";
+import story6 from "@/assets/storypack/imgi_161_Jgklht7885163.jpg";
+import story7 from "@/assets/storypack/imgi_162_nhaXco8735475.jpg";
+import story8 from "@/assets/storypack/imgi_163_nhYBFL7885163.jpg";
+import story9 from "@/assets/storypack/imgi_164_ybWbCt8735475.jpg";
+import story10 from "@/assets/storypack/imgi_165_oIbeGe8735475.jpg";
+import story11 from "@/assets/storypack/imgi_166_YQwpar8735475.jpg";
+import story12 from "@/assets/storypack/imgi_167_beHvFv8735475.jpg";
+import story13 from "@/assets/storypack/imgi_168_iXvimz8735475.jpg";
+import story14 from "@/assets/storypack/imgi_169_shmjib8735475.jpg";
+import story15 from "@/assets/storypack/imgi_171_jIvmYs8735475.jpg";
+import story16 from "@/assets/storypack/imgi_174_NbBMzi8735475.jpg";
+import story17 from "@/assets/storypack/imgi_175_aFsqXf8735475.jpg";
+import story18 from "@/assets/storypack/imgi_176_yBsqbJ8735475.jpg";
 import AnimatedSection from "./AnimatedSection";
 
-const transformations = [
-  { before: beforeFruit, after: afterFruit },
-  { before: beforeLingerie, after: afterLingerie },
-  { before: beforeGym, after: afterGym },
-  { before: beforeNetflix, after: afterNetflix },
-  { before: beforeFitness, after: afterFitness },
+const stories = [
+  story1, story2, story3, story4, story5, story6,
+  story7, story8, story9, story10, story11, story12,
+  story13, story14, story15, story16, story17, story18,
 ];
+
+const storiesRow1 = stories.slice(0, 9);
+const storiesRow2 = stories.slice(9, 18);
 
 const TransformationSection = () => {
   return (
@@ -41,37 +49,46 @@ const TransformationSection = () => {
           </AnimatedSection>
         </div>
 
-        <div className="space-y-12 lg:space-y-16">
-          {transformations.map((item, idx) => (
-            <div key={idx} className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
-              <AnimatedSection direction="left" delay={0.1}>
-                <motion.div
-                  className="relative rounded-2xl overflow-hidden bg-muted shadow-soft"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <span className="absolute top-3 left-3 z-10 px-3 py-1 bg-background/90 backdrop-blur-sm text-foreground/70 rounded-full text-[10px] tracking-[0.2em] uppercase font-medium">
-                    Antes
-                  </span>
-                  <img src={item.before} alt="Antes" className="w-full h-auto aspect-[9/16] object-cover" />
-                </motion.div>
-              </AnimatedSection>
-              <AnimatedSection direction="right" delay={0.2}>
-                <motion.div
-                  className="relative rounded-2xl overflow-hidden shadow-elevated"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <span className="absolute top-3 right-3 z-10 px-3 py-1 bg-foreground text-background rounded-full text-[10px] tracking-[0.2em] uppercase font-medium">
-                    Depois
-                  </span>
-                  <img src={item.after} alt="Depois" className="w-full h-auto aspect-[9/16] object-cover" />
-                </motion.div>
-              </AnimatedSection>
-            </div>
-          ))}
-        </div>
+      </div>
 
+      {/* carousel - edge-to-edge, compensates section-padding */}
+      <div className="overflow-hidden py-4 -mx-5 md:-mx-8">
+        <div className="flex flex-col gap-4">
+          {/* Row 1 - moves left */}
+          <div className="flex gap-4 animate-scroll-left">
+            {[...storiesRow1, ...storiesRow1, ...storiesRow1].map((src, index) => (
+              <div
+                key={`row1-${index}`}
+                className="w-36 sm:w-44 md:w-52 shrink-0 rounded-2xl overflow-hidden shadow-elevated"
+              >
+                <img
+                  src={src}
+                  alt={`Story ${index + 1}`}
+                  className="w-full aspect-[9/16] object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Row 2 - moves right */}
+          <div className="flex gap-4 animate-scroll-right">
+            {[...storiesRow2, ...storiesRow2, ...storiesRow2].map((src, index) => (
+              <div
+                key={`row2-${index}`}
+                className="w-36 sm:w-44 md:w-52 shrink-0 rounded-2xl overflow-hidden shadow-elevated"
+              >
+                <img
+                  src={src}
+                  alt={`Story ${index + 10}`}
+                  className="w-full aspect-[9/16] object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="container-wide">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20 max-w-5xl mx-auto">
           {[
             { num: "01", title: "Percepção de valor", desc: "Seu perfil passa a comunicar autoridade desde o primeiro toque." },
