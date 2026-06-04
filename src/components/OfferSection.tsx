@@ -45,7 +45,7 @@ const OfferSection = () => {
           <AnimatedSection delay={0.25}>
             <div className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full">
               <span className="text-xs font-medium text-primary tracking-wide">
-                🔒 Acesso Vitalício por apenas R$ 89,90 — sem mensalidade, sem renovação
+                🔒 Acesso Anual por apenas R$ 89,90 — renova uma vez por ano
               </span>
             </div>
           </AnimatedSection>
@@ -90,7 +90,7 @@ const OfferSection = () => {
 
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
-                  onClick={() => window.open("https://go.perfectpay.com.br/PPU38CQC9QP", "_blank")}
+                  onClick={() => window.open("https://checkout.ticto.app/O5515C365", "_blank")}
                   variant="outline"
                   className="w-full rounded-full py-6 text-sm uppercase tracking-[0.15em] font-medium border-foreground text-foreground hover:bg-foreground hover:text-background"
                 >
@@ -105,7 +105,7 @@ const OfferSection = () => {
             </motion.div>
           </AnimatedSection>
 
-          {/* Acesso Vitalício — destaque */}
+          {/* Acesso Anual — destaque */}
           <AnimatedSection delay={0.3}>
             <div className="relative lg:scale-[1.05] lg:z-10 transition-transform duration-300">
               {/* Pulsing border glow layer */}
@@ -121,16 +121,16 @@ const OfferSection = () => {
 
               <div className="mb-4">
                 <p className="text-[10px] tracking-[0.3em] uppercase text-primary font-medium mb-2">
-                  Acesso Vitalício
+                  Acesso Anual
                 </p>
-                <h3 className="font-serif text-3xl">Pague uma vez,<br />acesse para sempre.</h3>
+                <h3 className="font-serif text-3xl">Pague por um ano,<br />acesse tudo sem limites.</h3>
               </div>
 
               {/* Destaque sem mensalidade */}
               <div className="mb-5 flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-2xl px-4 py-3">
                 <Shield className="w-4 h-4 text-primary shrink-0" />
                 <p className="text-sm text-background/90 font-medium leading-snug">
-                  Sem mensalidade. Sem renovação. <span className="text-primary">Apenas R$ 89,90 uma única vez.</span>
+                  Acesso completo por 12 meses. <span className="text-primary">Apenas R$ 89,90 por ano.</span>
                 </p>
               </div>
 
@@ -140,7 +140,7 @@ const OfferSection = () => {
                   <span className="text-2xl">,90</span>
                 </div>
                 <p className="text-sm text-background/60 mt-1 font-light">
-                  Pagamento único — acesso vitalício a todos os entregáveis.
+                  Renovação anual — acesso a todos os entregáveis por 12 meses.
                 </p>
               </div>
 
@@ -157,10 +157,10 @@ const OfferSection = () => {
 
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
-                  onClick={() => window.open("https://go.perfectpay.com.br/PPU38CQC9R0", "_blank")}
+                  onClick={() => window.open("https://checkout.ticto.app/OB20B47EE", "_blank")}
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-6 text-sm uppercase tracking-[0.15em] font-medium shadow-glow"
                 >
-                  Quero Acesso Vitalício
+                  Quero Acesso Anual
                 </Button>
               </motion.div>
 
